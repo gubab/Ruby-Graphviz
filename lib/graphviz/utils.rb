@@ -61,7 +61,8 @@ class GraphViz
       puts errors
       puts "status"
       puts status
-      if (status.nil? && (errors.nil? || errors.strip.empty?)) || status.zero?
+
+      if (status.nil? && (errors.nil? || errors.strip.empty?)) || (status && status.zero?)
         output
       else
         raise "Error from #{cmd}:\n#{errors}"
