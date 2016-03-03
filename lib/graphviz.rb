@@ -597,7 +597,12 @@ class GraphViz
                xOutputWithoutFile +
                [tmpPath]
 
+        begin
         xOutput << output_from_command( xCmd )
+        rescue
+          puts "ERROR: dot: #{xDOTScript}"
+          raise
+        end
       end
 
       # Not Hugly
