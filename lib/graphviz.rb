@@ -600,7 +600,7 @@ class GraphViz
         begin
         xOutput << output_from_command( xCmd )
         rescue
-          puts "ERROR: dot: #{xdOtScript}"
+          puts "ERROR: dot: #{xDOtScript}"
           raise
         end
       end
@@ -614,7 +614,7 @@ class GraphViz
         end
       end
 
-      puts xdOtScript
+      puts xDOTScript
       if xOutputString
         xOutput
       else
